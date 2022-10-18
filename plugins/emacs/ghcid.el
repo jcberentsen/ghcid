@@ -24,6 +24,7 @@
 
 (setq ghcid-process-name "ghcid")
 
+(setq ghcid-options "")
 
 (define-minor-mode ghcid-mode
   "A minor mode for ghcid terminals
@@ -83,7 +84,7 @@ recognize the new height until you manually restart it by calling
 
 ;; TODO Pass in compilation command like compilation-mode
 (defun ghcid-command (h)
-    (format "ghcid -c \"%s\" -h %s\n" (ghcid-stack-cmd ghcid-target) h))
+    (format "ghcid -c \"%s\" -h %s %s\n" (ghcid-stack-cmd ghcid-target) h ghcid-options))
 
 (defun ghcid-get-buffer ()
   "Create or reuse a ghcid buffer with the configured name and
