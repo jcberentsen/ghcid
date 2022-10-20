@@ -21,6 +21,7 @@
 
 ;; Set ghcid-target to change the stack target
 (setq ghcid-target "")
+(setq ghci-stack-args "")
 
 (setq ghcid-process-name "ghcid")
 
@@ -80,7 +81,7 @@ recognize the new height until you manually restart it by calling
   (concat "*" ghcid-process-name "*"))
 
 (defun ghcid-stack-cmd (target)
-  (format "stack ghci %s --test --bench --ghci-options=-fno-code" target))
+  (format "stack ghci %s --test --bench %s" target ghci-stack-args))
 
 ;; TODO Pass in compilation command like compilation-mode
 (defun ghcid-command (h)
