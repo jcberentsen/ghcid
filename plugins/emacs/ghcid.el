@@ -113,6 +113,7 @@ exactly. See `ghcid-mode'."
       (setq-local scroll-up-aggressively 1)
       (setq-local show-trailing-whitespace nil)
 
+      (message "Invoking ghcid command: %s" (ghcid-command height))
       (term-exec (ghcid-buffer-name)
            ghcid-process-name
            "/bin/bash"
