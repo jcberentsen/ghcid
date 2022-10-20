@@ -17,7 +17,7 @@
 
 ;;; Code:
 (require 'compile)
-(require 'term)
+(require 'vterm)
 
 ;; Set ghcid-target to change the stack target
 (setq ghcid-target "")
@@ -106,8 +106,8 @@ exactly. See `ghcid-mode'."
     ;; Only now we can figure out the height to pass along to the ghcid process
     (let ((height (- (window-body-size) 1)))
 
-      (term-mode)
-      (term-line-mode)  ;; Allows easy navigation through the buffer
+      (vterm-mode)
+      ;; (term-line-mode)  ;; Allows easy navigation through the buffer
       (ghcid-mode)
 
       (setq-local term-buffer-maximum-size height)
