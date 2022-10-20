@@ -110,7 +110,7 @@ exactly. See `ghcid-mode'."
       ;; (term-line-mode)  ;; Allows easy navigation through the buffer
       (ghcid-mode)
 
-      (setq-local term-buffer-maximum-size height)
+      ;; (setq-local term-buffer-maximum-size height)
       (setq-local scroll-up-aggressively 1)
       (setq-local show-trailing-whitespace nil)
 
